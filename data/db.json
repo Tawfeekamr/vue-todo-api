@@ -10,19 +10,25 @@
       "id": 2,
       "title": "Make marketing email",
       "details": "Lorem ipsum",
-      "complete": true
+      "complete": false
     },
     {
       "title": "Hello",
-      "details": "",
-      "complete": false,
+      "details": "asdsad",
+      "complete": true,
       "id": 3
     },
     {
       "title": "Back1",
       "details": "Nulla porta dolor. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Duis lobortis massa imperdiet quam. Vivamus quis mi. Phasellus accumsan cursus velit.\n\nVivamus consectetuer hendrerit lacus. Cras ultricies mi eu turpis hendrerit fringilla. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Morbi ac felis. Pellentesque auctor neque nec urna.",
-      "complete": false,
+      "complete": true,
       "id": 4
+    },
+    {
+      "title": "Max",
+      "details": "Ut tincidunt tincidunt erat. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Suspendisse potenti. Aliquam erat volutpat. Pellentesque dapibus hendrerit tortor.\n\nNullam dictum felis eu pede mollis pretium. Donec sodales sagittis magna. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Praesent ac sem eget est egestas volutpat.",
+      "complete": false,
+      "id": 5
     }
   ]
 }

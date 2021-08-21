@@ -22,7 +22,6 @@
             return {
                 title: '',
                 details: '',
-                complete: false
             }
         },
 

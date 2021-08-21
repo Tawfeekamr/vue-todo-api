@@ -1,8 +1,9 @@
 <template>
 
     <div class="home">
+        <filter-nav @filterChanged="current = $event" :current="current" />
       <div v-if="projects.length">
-          <div v-for="project in projects" :key="project.id">
+          <div v-for="project in filterProjects" :key="project.id">
                 <div>
                     <single-project :project="project" @complete="handleComplete" @delete="handleDelete"/>
                 </div>
@@ -17,16 +18,19 @@
 import SingleProject from "../components/SingleProject";
 import BASE_URL from "../utility/constants";
 import NavBar from "../components/Navbar";
+import FilterNav from "../components/FilterNav";
 export default {
   name: 'Home',
   components: {
+      FilterNav,
       NavBar,
       SingleProject
 
   },
     data() {
       return {
-          projects: []
+          projects: [],
+          current: 'all'
       }
     },
     mounted() {
@@ -42,6 +46,25 @@ export default {
         handleComplete(id) {
           let toBeCompleted = this.projects.find( item => item.id === id );
           toBeCompleted.complete = !toBeCompleted.complete;
+        },
+
+    },
+    computed: {
+        filterProjects() {
+            switch (this.current) {
+                case 'all': {
+                    return this.projects
+                }
+                case 'completed': {
+                    return this.projects.filter(item => item.complete === true)
+                }
+                case 'not-completed': {
+                   return  this.projects.filter(item => item.complete === false)
+                }
+                default: {
+                    return this.projects
+                }
+            }
         }
     }
 }
